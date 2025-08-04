@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 212 100% 40%; /* azul forte */
+    --foreground: 0 0% 100%; /* branco */
+
+    --card: 212 90% 35%; /* azul um pouco mais escuro */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 212 85% 30%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 212 100% 60%; /* azul claro */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 212 95% 50%; /* azul médio */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 212 100% 70%;
+    --muted-foreground: 212 100% 20%;
+
+    --accent: 212 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 212 60% 60%;
+    --input: 212 60% 60%;
+    --ring: 212 100% 60%;
+
+    /* Tons azuis */
+    --blue-main: 212 100% 40%;
+    --blue-dark: 212 90% 30%;
+    --blue-light: 212 100% 70%;
+    --blue-extra-light: 212 100% 90%;
+
+    /* Gradientes */
+    --gradient-blue: linear-gradient(135deg, hsl(var(--blue-main)), hsl(var(--blue-light)));
+    --gradient-blue-deep: linear-gradient(135deg, hsl(var(--blue-dark)), hsl(var(--blue-main)));
+
+    /* Sombras */
+    --shadow-blue: 0 10px 30px -10px hsl(var(--blue-dark) / 0.4);
+    --shadow-soft: 0 4px 15px -5px hsl(0 0% 100% / 0.1);
+    --shadow-accent: 0 0 20px hsl(var(--blue-light) / 0.3);
+
+    --transition-smooth: all 0.3s ease;
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 212 95% 45%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 212 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 212 90% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 212 80% 50%;
+    --sidebar-ring: 212 100% 60%;
+  }
+
+  .dark {
+    --background: 212 100% 20%;
+    --foreground: 0 0% 100%;
+
+    --card: 212 90% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 212 90% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 212 100% 60%;
+    --primary-foreground: 212 100% 15%;
+
+    --secondary: 212 90% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 212 80% 30%;
+    --muted-foreground: 0 0% 100%;
+
+    --accent: 212 80% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 212 70% 30%;
+    --input: 212 70% 30%;
+    --ring: 212 100% 60%;
+
+    --sidebar-background: 212 100% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 212 100% 60%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 212 90% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 212 80% 20%;
+    --sidebar-ring: 212 100% 60%;
+
+    --muted-foreground-light: 212 100% 40%;
+    --muted-foreground-dark: 212 100% 15%;
+    --muted-foreground-soft: 212 60% 40%;
+
+  }
+}
+  
+
+.header{
+  background-color: hsl(212, 60%, 60%) 
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
