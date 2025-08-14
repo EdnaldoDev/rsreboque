@@ -71,7 +71,7 @@ const ServicesSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Nossos Serviços
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-foreground max-w-3xl mx-auto">
             Oferecemos uma ampla gama de soluções em fabricação de equipamentos para transporte, 
             sempre com foco na qualidade, durabilidade e eficiência.
           </p>
@@ -81,7 +81,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="hover:shadow-xl transition-all duration-300 group border-2 hover:border-primary/20"
+              className="hover:shadow-xl transition-all duration-300 group border-2 hover:border-primary/20 text-muted-foreground"
             >
               <CardHeader className="text-center pb-4">
                 <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -92,18 +92,18 @@ const ServicesSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground">{service.description}</p>
+                <p className="text-foreground">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2 text-sm">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">{feature}</span>
+                      <span className="text-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Button 
                   variant="outline" 
-                  className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                  className="w-full mt-4 group-hover:bg-primary group-hover:text-secondary-foreground transition-colors text-foreground"
                   onClick={scrollToContact}
                 >
                   Solicitar Orçamento
@@ -120,7 +120,7 @@ const ServicesSection = () => {
             <h3 className="text-2xl font-bold mb-4 text-foreground">
               Serviços Adicionais
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-foreground">
               Além da fabricação, oferecemos serviços completos para manter seus equipamentos sempre em perfeitas condições.
             </p>
           </div>
@@ -131,7 +131,7 @@ const ServicesSection = () => {
                 <Wrench className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-semibold mb-2 text-foreground">Manutenção</h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-foreground">
                 Serviços de manutenção preventiva e corretiva
               </p>
             </div>
@@ -141,7 +141,7 @@ const ServicesSection = () => {
                 <Package className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-semibold mb-2 text-foreground">Peças</h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-foreground">
                 Fornecimento de peças originais e acessórios
               </p>
             </div>
@@ -151,7 +151,7 @@ const ServicesSection = () => {
                 <Truck className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-semibold mb-2 text-foreground">Entrega</h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-foreground">
                 Entregamos em toda a região metropolitana
               </p>
             </div>
@@ -161,7 +161,7 @@ const ServicesSection = () => {
                 <ArrowRight className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-semibold mb-2 text-foreground">Consultoria</h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-foreground">
                 Orientação técnica especializada
               </p>
             </div>

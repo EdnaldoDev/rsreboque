@@ -7,6 +7,9 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { FaWhatsapp } from "react-icons/fa";
 import MapaGoogle from "@/hooks/mapagoolge";
+import { sendEmail } from "@/hooks/emailform";
+import { title } from "process";
+import { Description } from "@radix-ui/react-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -26,14 +29,25 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit =async (e: React.FormEvent) => {
     e.preventDefault();
     
+    try{
+      const res= await sendEmail(formData)
     // Simulate form submission
-    toast({
-      title: "Mensagem enviada com sucesso!",
-      description: "Entraremos em contato em breve. Obrigado pelo interesse!",
-    });
+     if(res.status=200){
+         toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Entraremos em contato em breve. Obrigado pelo interesse!",
+      });
+      }
+     
+    }catch(err){
+      toast({
+        title:"Erro ao enviar o email",
+        description:"Tente enviar o email novamente mais tarde"
+      })
+    }
 
     // Reset form
     setFormData({
@@ -189,7 +203,7 @@ const ContactSection = () => {
           <div className="space-y-6">
             <div className="grid gap-6">
               {contactInfo.map((contact, index) => (
-                <a href="https://api.whatsapp.com/send/?phone=5517996139290&text=ola gostaria de saber, mais sobre os trailers&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send/?phone=5517996139290&text= Gostaria de saber, mais sobre os trailer e fazer um orçamentos&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
                     <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
