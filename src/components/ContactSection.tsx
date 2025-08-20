@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,6 +12,7 @@ import { title } from "process";
 import { Description } from "@radix-ui/react-toast";
 
 const ContactSection = () => {
+  const form=useRef()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,23 +32,7 @@ const ContactSection = () => {
 
   const handleSubmit =async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    try{
-      const res= await sendEmail(formData)
-    // Simulate form submission
-     if(res.status=200){
-         toast({
-        title: "Mensagem enviada com sucesso!",
-        description: "Entraremos em contato em breve. Obrigado pelo interesse!",
-      });
-      }
-     
-    }catch(err){
-      toast({
-        title:"Erro ao enviar o email",
-        description:"Tente enviar o email novamente mais tarde"
-      })
-    }
+    sendEmail(form)
 
     // Reset form
     setFormData({
@@ -108,7 +93,7 @@ const ContactSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
@@ -238,7 +223,7 @@ const ContactSection = () => {
                     Mapa da Localização
                   </p>
                   <p className="text-sm text-muted-foreground>
-                    Rua Industrial, 1234 - São Paulo/SP
+                    Rua Professor Nelson Pires, 75 - Catanduva-SP
                   </p>
                 </div>
               </div>

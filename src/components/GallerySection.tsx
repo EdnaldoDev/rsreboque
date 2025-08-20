@@ -8,17 +8,17 @@ import f1 from "@/assets/fotosTrailer/f1.jpg";
 import f2 from "@/assets/fotosTrailer/f2.jpg";
 import f3 from "@/assets/fotosTrailer/f3.jpg";
 import f4 from "@/assets/fotosTrailer/f4.jpg";
-import f5 from "@/assets/fotosTrailer/f5.jpg";
-import f6 from "@/assets/fotosTrailer/f6.jpg";
-import f7 from "@/assets/fotosTrailer/f7.jpg";
-import f8 from "@/assets/fotosTrailer/f8.jpg";
-import f9 from "@/assets/fotosTrailer/f9.jpg";
-import f10 from "@/assets/fotosTrailer/f10.jpg";
-import f11 from "@/assets/fotosTrailer/f11.jpg";
-import f12 from "@/assets/fotosTrailer/f12.jpg";
-import f13 from "@/assets/fotosTrailer/f13.jpg";
-import f14 from "@/assets/fotosTrailer/f14.jpg";
-import f15 from "@/assets/fotosTrailer/f15.jpg";
+// import f5 from "@/assets/fotosTrailer/f5.jpg";
+// import f6 from "@/assets/fotosTrailer/f6.jpg";
+// import f7 from "@/assets/fotosTrailer/f7.jpg";
+// import f8 from "@/assets/fotosTrailer/f8.jpg";
+// import f9 from "@/assets/fotosTrailer/f9.jpg";
+// import f10 from "@/assets/fotosTrailer/f10.jpg";
+// import f11 from "@/assets/fotosTrailer/f11.jpg";
+// import f12 from "@/assets/fotosTrailer/f12.jpg";
+// import f13 from "@/assets/fotosTrailer/f13.jpg";
+// import f14 from "@/assets/fotosTrailer/f14.jpg";
+// import f15 from "@/assets/fotosTrailer/f15.jpg";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -26,69 +26,94 @@ const GallerySection = () => {
  const galleryImages = [
   {
     src: f1,
-    title: "Trailer Pesado - 40 Toneladas",
-    description: "Trailer reforçado para transporte de cargas pesadas com sistema de freios pneumático."
+    title: "Trailer",
+    description: "Trailer para empresa de drinks e batidas usado em festa e eventos"
   },
   {
     src: f2,
-    title: "Carretinha Utilitária",
-    description: "Reboque leve e versátil para uso urbano e rural, com acabamento premium."
+    title: "Trailer",
+    description: "Trailer para empresa de drinks e batidas usado em festa e eventos"
   },
   {
     src: f3,
-    title: "Acessórios e Componentes",
-    description: "Linha completa de acessórios e componentes de alta qualidade."
+    title: "Trailer",
+    description: "Trailer para empresa de drinks e batidas usado em festa e eventos"
   },
   {
-    src: f5,
-    title: "Reboque Industrial",
-    description: "Solução robusta para transporte industrial com garantia estendida."
+    src: 'https://lucarreboques.com.br/wp-content/uploads/2024/01/01-11-430x430.png',
+    title: "Carretinha Jet Ski",
+    description: "Solução robusta para transporte de qualquer tipo de embarcação"
   },
   {
-    src: f6,
-    title: "Detalhes de Acabamento",
-    description: "Atenção aos detalhes em cada projeto, garantindo qualidade superior."
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgwId9HIf6z1H4OSGUTTtDWlg18JW9CZ_59Q&s",
+    title: "Carretinha Jet Ski",
+    description: "Reboque projetado para transporte seguro de jet skis, com base acolchoada e estrutura galvanizada."
   },
   {
-    src: f7,
-    title: "Transporte Agrícola",
-    description: "Ideal para movimentação de implementos e colheitas no campo."
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNMQe4Qp6d9BKLzU5L47n_Mco3uW6PfAmunQ&s",
+    title: "Carretinha Jet Ski",
+    description: "Reboque projetado para transporte seguro de jet skis, com base acolchoada e estrutura galvanizada."
   },
   {
-    src: f8,
-    title: "Engate Rápido",
-    description: "Facilidade e segurança no acoplamento ao veículo."
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4gE19zHnWVKVSEbVL8jPClDH5cz4M0bm5TQ&s",
+   title: "Carretinha Utilitária",
+    description: "Trailer utilitário aberto, ideal para transporte de cargas diversas, leve e versátil."
   },
   {
-    src: f9,
-    title: "Carretinha Multiuso",
-    description: "Design compacto e funcional para o dia a dia."
+    src: "https://mountainhomeutilitytrailers.com/wp-content/uploads/2018/01/6E73AFE3-C8F9-43E5-9080-9FBC92D9C938.png",
+   title: "Carretinha Utilitária",
+    description: "Reboque robusto para cargas pesadas, estrutura reforçada para uso industrial ou agrícola."
   },
   {
-    src: f10,
-    title: "Chassi Reforçado",
-    description: "Estrutura construída com aço de alta resistência."
-  },
-  {
-    src: f11,
-    title: "Sistema de Iluminação LED",
-    description: "Tecnologia LED para maior visibilidade e economia."
-  },
-  {
-    src: f12,
-    title: "Caçamba Basculante",
-    description: "Facilidade na descarga de materiais com acionamento hidráulico."
-  },
-  {
-    src: f13,
-    title: "Pintura Eletrostática",
-    description: "Acabamento durável e resistente à corrosão."
-  },
-  {
-    src: f15,
-    title: "Reboques para Barcos",
-    description: "Projetados para navegação com segurança e facilidade."
+    src: "https://renowncargotrailers.com/wp-content/uploads/2021/02/IMG_3812.png",
+   title: "Carretinha Utilitária",
+    description: "Carretinha reforçada"
   }
+  // {
+  //   src: f6,
+  //   title: "Detalhes de Acabamento",
+  //   description: "Atenção aos detalhes em cada projeto, garantindo qualidade superior."
+  // },
+  // {
+  //   src: f7,
+  //   title: "Transporte Agrícola",
+  //   description: "Ideal para movimentação de implementos e colheitas no campo."
+  // },
+  // {
+  //   src: f8,
+  //   title: "Engate Rápido",
+  //   description: "Facilidade e segurança no acoplamento ao veículo."
+  // },
+  // {
+  //   src: f9,
+  //   title: "Carretinha Multiuso",
+  //   description: "Design compacto e funcional para o dia a dia."
+  // },
+  // {
+  //   src: f10,
+  //   title: "Chassi Reforçado",
+  //   description: "Estrutura construída com aço de alta resistência."
+  // },
+  // {
+  //   src: f11,
+  //   title: "Sistema de Iluminação LED",
+  //   description: "Tecnologia LED para maior visibilidade e economia."
+  // },
+  // {
+  //   src: f12,
+  //   title: "Caçamba Basculante",
+  //   description: "Facilidade na descarga de materiais com acionamento hidráulico."
+  // },
+  // {
+  //   src: f13,
+  //   title: "Pintura Eletrostática",
+  //   description: "Acabamento durável e resistente à corrosão."
+  // },
+  // {
+  //   src: f15,
+  //   title: "Reboques para Barcos",
+  //   description: "Projetados para navegação com segurança e facilidade."
+  // }
 ];
 
 
