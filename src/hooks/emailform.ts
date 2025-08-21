@@ -4,7 +4,7 @@ import { toast } from "./use-toast";
 export const sendEmail = async (form) => {
   try {
     const formData = new FormData(form.current);
-    formData.append("access_key", "3faf241f-63de-40a8-8cc3-2f9adb0249ed"); // substitua pela sua chave do Web3Forms
+    formData.append("access_key", "ae141300-ea9d-44e4-a9ac-d6d40f262c4a"); // substitua pela sua chave do Web3Forms
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
